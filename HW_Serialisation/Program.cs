@@ -13,6 +13,9 @@ namespace HW_Serialisation
         {
             Service serv = new Service();
             serv.BookAddService();
+
+            ServiceSoap soap = new ServiceSoap();
+            soap.PersonService();
         }
     }
 }

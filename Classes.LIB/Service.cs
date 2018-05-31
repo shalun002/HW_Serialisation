@@ -6,6 +6,12 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Soap;
+
+/// <summary>
+/// 1.	Объявить в консольном приложении класс Book с полями: название, стоимость, автор, год. Создать коллекцию элементов Book и заполнить тестовыми данными. С помощью класса BinaryFormatter сохранить состояние приложения в двоичный файл.
+///  2.	На основании задания 1 восстановить состояние приложения из двоичного файла.
+/// </summary>
 
 namespace Classes.LIB
 {
@@ -13,12 +19,6 @@ namespace Classes.LIB
     {
         public string path = @"books.dat";
 
-        /// <summary>
-        /// 1.	Объявить в консольном приложении класс Book с полями: название, стоимость, автор, год. Создать коллекцию элементов Book и заполнить тестовыми данными. С помощью класса BinaryFormatter сохранить состояние приложения в двоичный файл.
-        ///  2.	На основании задания 1 восстановить состояние приложения из двоичного файла.
-        /// </summary>
-
-        #region класс Book 
         public void BookAddService()
         {
             List<Book> listBooks = new List<Book>()
@@ -68,8 +68,8 @@ namespace Classes.LIB
                     Console.WriteLine();
                 }
             }
-        }
 
-        #endregion
+            Console.WriteLine("================================================================================================");
+        }
     }
 }
